@@ -4,9 +4,16 @@ import React, { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Directory from "./components/DirectoryComponent";
 import "./App.css";
+import { CAMPSITES, Campsites } from "./shared/campsites"; // imports the campsites array, after deleting it from DirectoryComponent
 //the IMPORT & EXPORT keywords allow files to share data with each other. This shared data can be objects, primitives, and functions (including classes(which are technically syntactic sugar for functions)). There are two kinds of EXPORTS: named & default. There can only be one default export (it's kinda in the name), while a file can have many named exports.
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      campsites: CAMPSITES,
+    };
+  }
   render() {
     return (
       <div className="App">
@@ -15,7 +22,7 @@ class App extends Component {
             <NavbarBrand href="/">NuCamp</NavbarBrand>
           </div>
         </Navbar>
-        <Directory />
+        <Directory campsites={this.state.campsites} />
       </div>
     );
   }

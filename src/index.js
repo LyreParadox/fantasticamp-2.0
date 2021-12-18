@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-// this tells the file to import the App FUNCTION from app.js (which is in the same folder) technically we don't even have to use the App name here, since there's only one export from the App file (Module). We could name it anything (but don't, it would be confusing)
-import App from './App';
+import "./index.css";
 // if we were importing a named export from App.js it would look like this: (and of course here we have to use the specific name of what we're exporting)
 // import { App } from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "typeface-lobster";
+import "typeface-open-sans";
+// this tells the file to import the App FUNCTION from app.js (which is in the same folder) technically we don't even have to use the App name here, since there's only one export from the App file (Module). We could name it anything (but don't, it would be confusing)
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
